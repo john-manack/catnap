@@ -9,7 +9,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <header className="App-header">
-          <h3>Cattitude</h3>
+          <h3>Cattitude 🐈</h3>
         </header>
       </div>
       <Updater/>
