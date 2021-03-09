@@ -4,7 +4,7 @@ import ActionSetActivity from '../components/ActionSetActivity';
 
 const Updater = () => (
     <>
-        <h1>Here's A Kitty App!</h1>
+        <h1>Cat Reducer 🐈</h1>
         <ActionSetName/>
         <Output />
         <ActionSetActivity/>
