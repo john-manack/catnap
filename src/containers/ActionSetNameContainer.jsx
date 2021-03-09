@@ -4,8 +4,8 @@ import { setName } from '../redux/actions';
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleClick: () => {
-            dispatch(setName())
+        handleClick: (name) => {
+            dispatch(setName(name))
         }
     }
 }

@@ -4,8 +4,8 @@ import { setActivity } from '../redux/actions';
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleClick: () => {
-            dispatch(setActivity())
+        handleClick: (activity) => {
+            dispatch(setActivity(activity))
         }
     }
 }
