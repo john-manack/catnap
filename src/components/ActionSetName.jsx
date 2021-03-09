@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import { setName } from '../redux/actions';
 
 class ActionSetName extends Component {
     constructor(props) {
@@ -45,4 +46,12 @@ class ActionSetName extends Component {
 
 }
 
-export default ActionSetName;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleClick: (name) => {
+            dispatch(setName(name))
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ActionSetName);
