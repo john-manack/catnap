@@ -3,7 +3,7 @@ import { updater } from './reducers';
 
 const defaultState = {
     name: 'Guster',
-    activity: 'blep',
+    activity: 'staring at you',
 }
 
 export const store = createStore(
