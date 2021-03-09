@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setName } from '../redux/actions';
+import { setNewCat } from '../redux/actions';
 
-class ActionSetName extends Component {
+class ActionNewCat extends Component {
     constructor(props) {
         super(props);
         this.state = {
             petName: '',
+            petActivity: '',
         }
     }
 
@@ -20,8 +21,10 @@ class ActionSetName extends Component {
     _handleSubmit = (event) => {
         event.preventDefault();
         this.props.handleClick(this.state.petName);
+        this.props.handleClick(this.state.petActivity);
         this.setState({
-            petName: ''
+            petName: '',
+            petActivity: '',
         });
     }
 
@@ -38,7 +41,12 @@ class ActionSetName extends Component {
                             onChange={this._handleChange}>
                         </input>
                     </label>
-                    <button type="submit">Change Name</button>
+                    <select name="petActivity" onChange={this.handleClick}>
+                        <option value='playing'>Play</option>
+                        <option value='eating'>Eat</option>
+                        <option value='napping'>Nap</option>
+                    </select>
+                    <button type="submit">Add Cat</button>
                 </form>
             </>
         )
@@ -49,9 +57,9 @@ class ActionSetName extends Component {
 const mapDispatchToProps = (dispatch) => {
     return {
         handleClick: (name) => {
-            dispatch(setName(name))
+            dispatch(setNewCat(name))
         }
     }
 }
 
-export default connect(null, mapDispatchToProps)(ActionSetName);
+export default connect(null, mapDispatchToProps)(ActionNewCat);
