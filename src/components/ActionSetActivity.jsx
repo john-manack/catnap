@@ -1,3 +1,6 @@
+import { connect } from 'react-redux';
+import { setActivity } from '../redux/actions';
+
 const ActionSetActivity = (props) => (
     <>
         <button onClick={() => props.handleClick('playing')}>Play</button>
@@ -6,4 +9,12 @@ const ActionSetActivity = (props) => (
     </>
 );
 
-export default ActionSetActivity;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleClick: (activity) => {
+            dispatch(setActivity(activity))
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ActionSetActivity);

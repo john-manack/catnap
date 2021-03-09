@@ -1,6 +1,6 @@
-import Output from '../containers/OutputContainer';
-import ActionSetName from '../containers/ActionSetNameContainer';
-import ActionSetActivity from '../containers/ActionSetActivityContainer';
+import Output from '../components/Output';
+import ActionSetName from '../components/ActionSetName';
+import ActionSetActivity from '../components/ActionSetActivity';
 
 const Updater = () => (
     <>
