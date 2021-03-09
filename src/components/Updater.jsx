@@ -8,7 +8,6 @@ const Updater = () => (
         <ActionSetName/>
         <Output />
         <ActionSetActivity/>
-        
     </>
 )
 
