@@ -20,8 +20,7 @@ class ActionNewCat extends Component {
 
     _handleSubmit = (event) => {
         event.preventDefault();
-        this.props.handleClick(this.state.petName);
-        this.props.handleClick(this.state.petActivity);
+        this.props.handleClick(this.state.petName, this.state.petActivity);
         this.setState({
             petName: '',
             petActivity: '',
@@ -33,15 +32,17 @@ class ActionNewCat extends Component {
             <>
                 <form onSubmit={this._handleSubmit}>
                     <label>
-                        Change Cat's Name:
+                        Pet Name:
                         <input
                             type='text'
                             name='petName'
-                            placeholder="Enter cat name"
-                            onChange={this._handleChange}>
+                            value={this.state.petName}
+                            onChange={this._handleChange}
+                            required>
                         </input>
                     </label>
-                    <select name="petActivity" onChange={this.handleClick}>
+                    <select name="petActivity" onChange={this._handleChange} required>
+                        <option disabled selected value=''>Make A Selection</option>
                         <option value='playing'>Play</option>
                         <option value='eating'>Eat</option>
                         <option value='napping'>Nap</option>
@@ -56,8 +57,8 @@ class ActionNewCat extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleClick: (name) => {
-            dispatch(setNewCat(name))
+        handleClick: (name, activity) => {
+            dispatch(setNewCat(name, activity))
         }
     }
 }

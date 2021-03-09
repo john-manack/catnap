@@ -3,7 +3,7 @@ import { updater } from './reducers';
 
 const defaultState = {
     cats: {
-        1001: {
+        'foo': {
             name: 'Rosie',
             activity: 'flopping'
         },

@@ -1,14 +1,14 @@
 import { ACTION_SET_ACTIVITY, ACTION_ADD_CAT } from './actionTypes';
 
 export const updater = (state, action) => {
-    const { id, activity, newCat } = action.payload || {};
+    const { id, activity, name } = action.payload || {};
     switch(action.type) {
         case ACTION_ADD_CAT:
             return {
                 ...state,
                 cats: {
                     ...state.cats,
-                    [id]: newCat
+                    [id]: { name, activity }
                 }
             }
         case ACTION_SET_ACTIVITY:
