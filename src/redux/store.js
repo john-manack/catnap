@@ -2,7 +2,8 @@ import { createStore } from 'redux';
 import { updater } from './reducers';
 
 const defaultState = {
-    activity: 'napping',
+    name: 'Guster',
+    activity: 'blep',
 }
 
 export const store = createStore(

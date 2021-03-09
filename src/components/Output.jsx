@@ -1,6 +1,6 @@
 const Output = (props) => (
     <div>
-        <h3>Rosie is currently {props.action}.</h3>
+        <h3>{props.name} is currently {props.activity}.</h3>
     </div>
 );
 

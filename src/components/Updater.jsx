@@ -1,15 +1,13 @@
 import Output from '../containers/OutputContainer';
-import Nap from '../containers/NapContainer';
-import Eat from '../containers/EatContainer';
-import Play from '../containers/PlayContainer';
+import ActionSetName from '../containers/ActionSetNameContainer';
+import ActionSetActivity from '../containers/ActionSetActivityContainer';
 
 const Updater = () => (
     <>
         <h1>Here's A Kitty App!</h1>
+        <ActionSetName/>
         <Output />
-        <Nap/>
-        <Eat/>
-        <Play/>
+        <ActionSetActivity/>
     </>
 )
 
